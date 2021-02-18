@@ -3,6 +3,8 @@ import axios from 'axios';
 import './App.css';
 import HeaderMaker from '../Header/Header';
 import FooterMaker from '../Footer/Footer';
+import GuestList from '../GuestList/GuestList';
+import DinnerSupplies from '../DinnerSupplies/DinnerSupplies';
 
 
 
@@ -108,7 +110,9 @@ function App() {
         </div>
         <button type="submit">Add Guest</button>
       </form>
-      <h2>Guest List</h2>
+
+
+      {/* <h2>Guest List</h2>
       <table>
         <thead>
           <tr>
@@ -124,8 +128,12 @@ function App() {
             </tr>
           ))}
         </tbody>
-      </table>
-      <h2>Dinner Supplies</h2>
+      </table> */}
+
+      <GuestList guestList={guestList}/>
+
+
+      {/* <h2>Dinner Supplies</h2>
       <div>
         Spoons: {guestList.length * 2}
       </div>
@@ -134,7 +142,9 @@ function App() {
       </div>
       <div>
         Knives: {guestList.length * 2}
-      </div>
+      </div> */}
+
+      <DinnerSupplies guestList={guestList} />
 
 
       {/* <footer>
