@@ -5,6 +5,7 @@ import HeaderMaker from '../Header/Header';
 import FooterMaker from '../Footer/Footer';
 import GuestList from '../GuestList/GuestList';
 import DinnerSupplies from '../DinnerSupplies/DinnerSupplies';
+import GuestForm from '../GuestForm/GuestForm';
 
 
 
@@ -67,8 +68,11 @@ function App() {
       <HeaderMaker />
 
       <h2>Party Leader</h2>
+
       {guestList[0] && <h3>{guestList[0].name}</h3>}
-      <h2>Add a new guest</h2>
+
+
+      {/* <h2>Add a new guest</h2>
       <form onSubmit={handleSubmit}>
         <label>
           Name
@@ -109,7 +113,10 @@ function App() {
           </div>
         </div>
         <button type="submit">Add Guest</button>
-      </form>
+      </form> */}
+
+      <GuestForm handleSubmit={handleSubmit}
+      newGuestName={newGuestName} setNewGuestName={setNewGuestName} newGuestMeal={newGuestMeal} setNewGuestMeal={setNewGuestMeal} />
 
 
       {/* <h2>Guest List</h2>
